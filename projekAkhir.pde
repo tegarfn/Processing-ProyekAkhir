@@ -1,5 +1,6 @@
 int speed = 5000;
 kereta krt = new kereta(0,0);
+rumah rmh = new rumah(0,0);
 
 void setup() {
     size(1920,1080);
@@ -7,8 +8,15 @@ void setup() {
 
 void draw() {
     background(200);
-    translate(width/2, height/2);
-    scale(0.25);
+    fill(50, 100, 150);
+    rect(0,930,1920,150);
+    translate(width/2,height/2);
+
+    pushMatrix();
+    fill(0);
+    strokeWeight(1);
+    translate(0,200);
+    scale(0.5);
     noFill();
     noStroke();
 
@@ -26,4 +34,7 @@ void draw() {
     for(int i = -4000; i <= 3500; i += 500){
         krt.railway(i,0);
     }
+    popMatrix();
+    
+    rmh.home(-960,540); 
 }
