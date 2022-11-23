@@ -1,4 +1,6 @@
 int speed = 5000;
+sunrise pagi = new sunrise(0,0);
+subuh jam3 = new subuh(0,0);
 kereta krt = new kereta(0,0);
 rumah rmh = new rumah(0,0);
 
@@ -11,6 +13,15 @@ void draw() {
     fill(50, 100, 150);
     rect(0,930,1920,150);
     translate(width/2,height/2);
+    
+    //pushMatrix();
+        //if (mousePressed == true){
+        //    pagi.pagihari(-640,-360);
+        //} else{
+        //    jam3.subuhan(-640,-360);
+        //}
+        //moon();
+    //popMatrix();
 
     pushMatrix();
         fill(0);
@@ -42,9 +53,10 @@ void draw() {
         rmh.home(-960,640); 
     popMatrix();
 
-    moon();
 }
 
 void moon(){
-    circle(600,-450, 100);
+    noStroke();
+    fill(255);
+    circle(500,-250, 100);
 }
