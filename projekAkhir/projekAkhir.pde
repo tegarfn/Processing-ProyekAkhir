@@ -3,7 +3,7 @@ kereta krt = new kereta(0,0);
 rumah rmh = new rumah(0,0);
 
 void setup() {
-    size(1920,1080);
+    size(1280,720);
 }
 
 void draw() {
@@ -16,14 +16,14 @@ void draw() {
         fill(0);
         strokeWeight(1);
         translate(0,200);
-        scale(0.5);
+        scale(0.25);
         noFill();
         noStroke();
 
-        krt.kepala(speed,-100);
+        krt.kepala(speed,-300);
 
         for(int i = 500; i <= 2500; i += 500){
-            krt.gerbong(speed+i,-100);
+            krt.gerbong(speed+i,-300);
         }
 
         if(speed < -10000){
@@ -33,13 +33,13 @@ void draw() {
         }
         
         for(int i = -4000; i <= 3500; i += 500){
-            krt.railway(i,0);
+            krt.railway(i,-200);
         }
     popMatrix();
     
     pushMatrix();
-        scale(1);
-        rmh.home(-960,540); 
+        scale(0.5);
+        rmh.home(-960,640); 
     popMatrix();
 
     moon();

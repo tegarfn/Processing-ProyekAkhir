@@ -11,26 +11,35 @@ class rumah {
         balcony(locX+400,locY-200);
         building(locX,locY);
         window(locX+50,locY-500);
+        window(locX-250,locY-500);
     }
 
     void building(int locX, int locY){
         noStroke();
         fill(20);
-        rect(locX,locY,400,-600);
-        fill(10);
-        rect(locX+350,locY,50,-600);
-        fill(10);
-        rect(locX,locY-615,420,15);
+        rect(locX-350,locY,770,-600);//body rumah
         fill(20);
-        rect(locX,locY-650,430,35);
+        rect(locX-350,locY+200,770,-600);//body bawah
         fill(10);
-        rect(locX,locY-125,420,15);
+        rect(locX+350,locY+170,50,-800);//sisi tiang sebelah kanan
+        fill(10);
+        rect(locX-350,locY-615,780,15);//fenti atap atas
+        fill(20);
+        rect(locX-350,locY-650,780,35);//fenti atap bawah
+        fill(10);
+        rect(locX-350,locY-125,780,15);//fenti tengah
         fill(30);
-        rect(locX,locY-160,430,35);
+        rect(locX-350,locY-160,780,35);
+        
 
         // brick effect
         //top
         fill(15);
+        rect(locX-60, locY-200, 80, 20);
+        rect(locX-250, locY-250, 50, 15);
+        rect(locX-260, locY-280, 70, 17);
+        rect(locX-240, locY-410, 40, 12);
+        rect(locX-140, locY-550, 60, 20);
         rect(locX+60, locY-200, 80, 20);
         rect(locX+250, locY-250, 50, 15);
         rect(locX+260, locY-280, 70, 17);
@@ -38,9 +47,12 @@ class rumah {
         rect(locX+140, locY-550, 60, 20);
 
         // bottom
+        rect(locX-100, locY-100, 60, 20);
+        rect(locX-120, locY-76, 55, 17);
+        rect(locX-270, locY-51, 45, 25);
         rect(locX+100, locY-100, 60, 20);
-        rect(locX+120, locY-76, 55, 17);
-        rect(locX+270, locY-51, 45, 25);
+        rect(locX+120, locY-46, 55, 17);
+        rect(locX+270, locY-31, 45, 25);
     }
 
     void balcony(int locX, int locY){
