@@ -3,6 +3,8 @@ sunrise pagi = new sunrise(0,0);
 subuh jam3 = new subuh(0,0);
 kereta krt = new kereta(0,0);
 rumah rmh = new rumah(0,0);
+air alir = new air(0,0);
+pinggir sungai = new pinggir(0,0);
 
 void setup() {
     size(1280,720);
@@ -15,14 +17,19 @@ void draw() {
     translate(width/2,height/2);
     
     //pushMatrix();
-        //if (mousePressed == true){
-        //    pagi.pagihari(-640,-360);
-        //} else{
-        //    jam3.subuhan(-640,-360);
-        //}
-        //moon();
+    //    if (mousePressed == true){
+    //        pagi.pagihari(-640,-360);
+    //    } else{
+    //        jam3.subuhan(-640,-360);
+    //    }
+    //    moon();
     //popMatrix();
 
+    pushMatrix();
+      alir.mengalir(0,0);
+      sungai.tanah(0,0);
+    popMatrix();
+    
     pushMatrix();
         fill(0);
         strokeWeight(1);
