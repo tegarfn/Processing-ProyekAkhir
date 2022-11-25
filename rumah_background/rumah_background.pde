@@ -1,14 +1,31 @@
+import java.lang.Runnable;
+
+int randomSeed = int(random(0,100));
+
+class Button{
+   color buttonColor;
+   color buttonHovered;
+   Runnable buttonClicked;
+   float x;
+   float y;
+   float width;
+   float height;
+   
+   
+   
+}
 
 void setup() {
     size(1280,720,P3D);
     smooth(4);
+    println("x");
 }
 
 void draw() {
     noStroke();
     background(0);
     fill(255);
-    randomSeed(20);
+    randomSeed(randomSeed);
     star(random(0, width), random(0, 150), random(0.15, 0.4));
     star(random(0, width), random(0, 150), random(0.15, 0.4));
     star(random(0, width), random(0, 150), random(0.15, 0.4));
