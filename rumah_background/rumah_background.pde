@@ -36,11 +36,14 @@ void draw() {
     translate(0, 0, -50);
     scale(0.9);
     for(int i = -100; i< width+200; i+=110){
-      randomSkyScraper(i, 300, random(200, 250), #2a112e);
+      int randomHeight = int(random(200, 400));
+      randomSkyScraper(i, 400-(randomHeight-200), randomHeight, #2a112e);
     }
     translate(0, 0, -20);
-        for(int i = -150; i< width+250; i+=110){
-      randomSkyScraper(i, 200, 200, #0c050e);
+    
+    for(int i = -150; i< width+250; i+=110){
+      int randomHeight = int(random(200, 400));
+      randomSkyScraper(i, 300-(randomHeight-200), randomHeight, #0c050e);
     }
     
     pop();
