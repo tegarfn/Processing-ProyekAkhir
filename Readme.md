@@ -37,6 +37,8 @@
             sedih yang tak kunjung hilang...<br>
         </i>
     </p>
+    <br>
+    <img src="https://github.com/tegarfn/Processing-ProyekAkhir/blob/main/assets/intro.png" alt="intro">
 </div>
 <br>
 
