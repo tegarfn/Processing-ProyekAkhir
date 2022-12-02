@@ -49,4 +49,5 @@ Gambaran diiringi oleh lagu backsound lo-fi yang akan membuat Anda tenang.
 
 ## Dokumentasi 📷
 berikut beberapa hasil tangkapan layar dari hasil proyek kami!~
-(soon to be added)
+<br>
+<img src="https://github.com/tegarfn/Processing-ProyekAkhir/blob/main/assets/intro.png" alt="intro">
