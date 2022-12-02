@@ -41,8 +41,12 @@
 <br>
 
 ## Tentang Proyek Kami 👋
-Proyek akhir kali ini mengambil tema lofi, [blom ada isinya]
+Proyek akhir kali ini mengambil tema lofi, dimana kita menggambarkan 
+sebuah landscape kota dari luar. Terdapat sungai yang di atasnya dibuat 
+sebuah jembatan untuk kereta. Dan pada foreground terdapat gambar rumah 
+dengan pemiliknya, menikmati pemandangan malam atau siang hari. 
+Gambaran diiringi oleh lagu backsound lo-fi yang akan membuat Anda tenang.
 
 ## Dokumentasi 📷
 berikut beberapa hasil tangkapan layar dari hasil proyek kami!~
-[blom ada isinya]
+(soon to be added)
