@@ -40,8 +40,9 @@
 </div>
 <br>
 
-## Tentang Proyek 👋
-Proyek akhir kali ini mengambil tema lofi [blom di isi]
+## Tentang Proyek Kami 👋
+Proyek akhir kali ini mengambil tema lofi, [blom ada isinya]
 
 ## Dokumentasi 📷
 berikut beberapa hasil tangkapan layar dari hasil proyek kami!~
+[blom ada isinya]
