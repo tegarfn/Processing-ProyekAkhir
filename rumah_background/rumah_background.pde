@@ -61,80 +61,45 @@ class Button {
   }
 }
 
-int randomSeeds = int(random(0, 100));
+//int randomSeeds = int(random(0, 100));
 
-Button randomizeButton = new Button(#d771c5, #ac49b5, new Runnable() {
-  @Override
-    public void run() {
-    randomSeeds = int(random(0, 100));
-  }
-}, "Randomize", 20, 20, 200, 50);
-
-
+//Button randomizeButton = new Button(#d771c5, #ac49b5, new Runnable() {
+//   @Override
+//     public void run() {
+//     randomSeeds = int(random(0, 100));
+//   }
+//}, "Randomize", width,500, 200, 50);
 
 
-void setup() {
-  size(1280, 720, P3D);
-  smooth(4);
-  println(brightness(color(#0c050e)));
-}
-
-
-
-void draw() {
+void draw_rumah(float x, float y, int randomSeeds) {
+  push();
   noStroke();
-  background(0);
   fill(255);
   randomSeed(randomSeeds);
-  randomizeButton.display();
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-  star(random(0, width), random(0, 150), random(0.15, 0.4));
-
-  push();
+  //randomizeButton.display();
+  //for(int i =0; i<100; i++){
+  //  star(random(x-width, x+width), random(y-800, y-200), random(0.15, 0.4));
+  //}
   fill(255);
 
-  translate(0, 0, -50);
+  // translate(0, 0, -20);
   scale(0.9);
-  for (int i = -100; i< width+200; i+=110) {
+  for (float i = x-width; i< x+width*2; i+=110) {
     int randomHeight = int(random(200, 400));
-    randomSkyScraper(i, 400-(randomHeight-200), randomHeight, #2a112e);
+    randomSkyScraper(i, y-(randomHeight-200), randomHeight, #362559);
   }
-  translate(0, 0, -20);
+  translate(0, 0, -50);
 
-  for (int i = -150; i< width+250; i+=110) {
+  for (float i = x-width; i< (x+width+250)*2; i+=110) {
     int randomHeight = int(random(200, 400));
-    randomSkyScraper(i, 300-(randomHeight-200), randomHeight, #0c050e);
+    randomSkyScraper(i, (y-100)-(randomHeight-200), randomHeight, #0c050e);
   }
 
   pop();
-
-  fill(255);
-  text("mouse at : (" + mouseX + "," + mouseY + ")", mouseX + 30, mouseY);
-  fill(get(mouseX, mouseY));
-  strokeWeight(1);
-  stroke(0);
-  rect(mouseX + 30, mouseY - 30, 20, 20);
 }
 
 void randomSkyScraper(float x, float y, float height, color colors) {
+  push();
   int skyScraper = int(random(0, 6.99));
   switch(skyScraper) {
   case 0:
@@ -159,6 +124,7 @@ void randomSkyScraper(float x, float y, float height, color colors) {
     skyScraperSeven(x, y, height, colors);
     break;
   }
+  pop();
 }
 
 void skyScraperOne(float x, float y, float height, color colors) {
@@ -337,10 +303,10 @@ void star(float x, float y, float scale) {
   pop();
 }
 
-void mouseMoved(){
-  randomizeButton.hovered(mouseX, mouseY);
-}
+//void mouseMoved(){
+//  randomizeButton.hovered(mouseX, mouseY);
+//}
 
-void mouseClicked(){
-  randomizeButton.clicked(mouseX, mouseY);
-}
+//void mouseClicked(){
+//  randomizeButton.clicked(mouseX, mouseY);
+//}

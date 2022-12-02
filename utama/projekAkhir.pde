@@ -1,6 +1,7 @@
 import processing.sound.*;
 SoundFile file;
 PImage img;
+PFont teks;
 
 air air = new air(0,0);
 pinggir pgr = new pinggir(0,0);
@@ -31,8 +32,9 @@ boolean conCatt = false;
 
 void setup() {
     size(1280,720,P3D);
-    // file = new SoundFile(this, "assets/sound.mp3");
-    // file.loop();
+    teks = createFont("assets/Caveat-Bold.ttf",32);
+    file = new SoundFile(this, "assets/sound.mp3");
+    file.loop();
     img = loadImage("assets/munir.jpg");
 }
 
@@ -62,6 +64,8 @@ void draw() {
     pushMatrix();
         scale(0.95);
         kt.town3(-960,490);
+        translate(0,0,25);
+        draw_rumah(-width/2,60, 11);
     popMatrix();
 
     translate(0,0,posZ);
@@ -103,7 +107,7 @@ void draw() {
         if(speed < -35000){
             speed = 5000;
         }else{
-            speed -= 200;
+            speed -= 50;
         }
         
         // rel kereta
@@ -139,6 +143,10 @@ void draw() {
     // text(mouseX,-500,-250);
     // text(mouseY,-425,-250);
 
+    translate(0,0,posZ);
+    textFont(teks);
+    fill(255);
+    text("Lofi At 3:00 Am - Downtown",-150,0);
     // interactive object
     translate(0,0,posZ);
     caty();
@@ -148,9 +156,10 @@ void draw() {
     // 3D tower
     pushMatrix();
         scale(0.7);
-        translate(750,300,-600);
+        translate(750,300,-700);
         tw.empire(0,0,0,c);
     popMatrix();
+    
 }
 
 void moon(){
